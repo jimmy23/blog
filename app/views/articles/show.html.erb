@@ -1,0 +1,19 @@
+<div class="col-md-8" sytle="margin-top:20px;">
+	<h1 class="text-center"><%= @article.title %></h1>
+	<p class="article-time"><%= @article.created_at.strftime("%B %d,%Y %T") %></p>
+	<p><%= @article.content %></p>
+
+	<ul class="pager">
+	  <li class="previous">
+	  	<%= link_to '<- 上一篇', "/articles/find_page?current_id=#{@article.id}&type=pre" %>
+	  </li>
+	  <li class="next">
+	  	<%= link_to "下一篇 ->", "/articles/find_page?current_id=#{@article.id}type=next" %>
+	  </li>
+	</ul>
+</div>
+
+<div class="col-md-4">
+	
+</div>
+

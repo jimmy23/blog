@@ -2,6 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.article-desc {
-	colo: #999;
+.article-desc, .article-time {
+	color: #999;
+}
+
+.article-time {
+	margin-bottom: 20px;
+}
+
+div.new-top10 {
+	border: 1px solid #eee;
+	border-radius: 4px;
+	float: right;
+	width: 200px;
 }

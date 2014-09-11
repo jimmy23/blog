@@ -1,14 +1,23 @@
-<div class="row">
-	<div class="col-md-8">
+<div class="col-md-8">
+	<% unless @articles.length == 0 %>
 		<% @articles.each do |a| %>
-			<h3><%= link_to a.title, edit_article_path(a.id) %></h3>
+			<h4><%= link_to a.title, article_path(a.id) %></h4>
 			<p class="article-desc"><%= a.content[0...20] if a.content %></p>
 			<hr>
 		<% end %>
-	</div>
 
-	<div class="col-md-4">
-		right banner
-	</div>
+		<%= paginate @articles %>
+	<% end %>
 </div>
 
+<div class="col-md-4">
+	<div class="new-top10">
+		<h5 class="text-center">最新的博客文章</h5>
+
+		<ul>
+			<% @top10.each do |a| %>
+				<li><%= link_to a.title[0...10], article_path(a.id) %></li>
+			<% end %>
+		</ul>	
+	</div>
+</div>

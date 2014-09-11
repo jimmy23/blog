@@ -9,13 +9,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<%= render 'layouts/header' %>
 	<div class="container">
-		<%= render 'layouts/header' %>
-		<%= yield %>	 
-	
-		<div class="blog-footer">
-	    <p>© Feiji 2014</p>
-	  </div>
+		<div class="row">
+			<%= yield %>
+		</div>
+  </div>
+
+  <div class="footer">
+    © Feiji 2014
   </div>
 </body>
 </html>

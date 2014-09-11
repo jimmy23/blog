@@ -1,0 +1,10 @@
+<div class="new-top10">
+	<h5 class="text-center">最新的博客文章</h5>
+
+	<ul>
+		<% @articles.each do |a| %>
+			<li><%= link_to a.title, article_path(a.id) %></li>
+		<% end %>
+	</ul>	
+</div>
+

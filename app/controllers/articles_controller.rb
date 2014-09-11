@@ -1,10 +1,16 @@
 class ArticlesController < ApplicationController
   def index
-  	@articles = Article.all
+  	@articles = Article.page(params[:page])
+
+    @top10 = Article.order("id desc").limit(10)
   end
 
   def new
   	@article = Article.new
+  end
+
+  def show
+  	@article = Article.find(params[:id])
   end
 
   def create
@@ -15,6 +21,22 @@ class ArticlesController < ApplicationController
   	else
   		render 'new'
   	end
+  end
+
+  def find_page
+    current_id, type = params[:current_id], params[:type]
+
+    if type == "pre"
+      @article = Article.where("id < ?", current_id).order("id desc").first
+    else
+      @article = Article.where("id > ?", current_id).first
+    end
+
+    if @article
+      redirect_to @article
+    else
+      redirect_to articles_path
+    end
   end
 
   private

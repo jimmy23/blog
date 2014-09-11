@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'rank/index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -55,7 +57,11 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  resources :articles
-
-  get "me" => 'me#index'
+  resources :articles do 
+    collection do 
+      get 'find_page'
+    end
+  end
+  resources :me
+  
 end
