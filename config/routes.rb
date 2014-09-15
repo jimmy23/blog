@@ -63,6 +63,7 @@ Rails.application.routes.draw do
     collection do 
       get 'find_page'
     end
+    resources :comments
   end
   resources :me
   resources :users

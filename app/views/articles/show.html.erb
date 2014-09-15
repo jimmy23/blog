@@ -11,7 +11,42 @@
 	  	<%= link_to "下一篇 ->", "/articles/find_page?current_id=#{@article.id}type=next" %>
 	  </li>
 	</ul>
-</div>
+
+	<div class="comments">
+		<% @article.comments.each do |comment| %>
+			<div class="comment-left">
+				<%= comment.commenter %>
+			</div>
+			<div class="comment-right">
+				<%= comment.body %>
+			</div>
+		<% end %>
+	</div>
+
+	<div class="new-comment">
+		<h4>发表评论:</h4>
+
+		<%= form_for([@article, @article.comments.build], html: {class: "form-horizontal", role: "form"}) do |f| %>
+		  <div class="form-group">
+		    <%= f.label :commenter, "作者", class: "col-md-2 control-label" %>
+		    <div class="col-md-4">
+		    	<%= f.text_field :commenter, class: "form-control", placeholder: "这里写你的邮箱" %>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <%= f.label :body, "内容", class: "col-md-2 control-label" %>
+		    <div class="col-md-4">
+			    <%= f.text_area :body, size: '70x10', placeholder: "说些什么吧。。。" %>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		  	<div class="col-md-4 col-md-offset-2">
+			    <%= f.submit :发表, class: "btn btn-primary" %>
+		  	</div>
+		  </div>
+		<% end %>
+		
+	</div>
 
 <div class="col-md-4">
 	
