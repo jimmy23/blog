@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_action :auth_log_in, only: [:new, :create, :destroy, :update]
+
   def index
   	@articles = Article.page(params[:page])
 
@@ -23,6 +25,10 @@ class ArticlesController < ApplicationController
   	end
   end
 
+  def update
+
+  end
+
   def find_page
     current_id, type = params[:current_id], params[:type]
 
@@ -37,6 +43,14 @@ class ArticlesController < ApplicationController
     else
       redirect_to articles_path
     end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+
+    flash[:notice] = "文章已删除"
+    redirect_to articles_path
   end
 
   private
