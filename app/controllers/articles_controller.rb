@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  include ApplicationHelper
+
   before_action :auth_log_in, only: [:new, :create, :destroy, :update]
 
   def index
@@ -56,6 +58,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
+    params[:article][:content] = clean_html(params[:content])
   	params.require(:article).permit(:title, :content)
   end
 end

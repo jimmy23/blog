@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user, :is_admin?
 
-  before_action :get_cookies
+  before_action :get_cookies, :current_user
 
   private
 

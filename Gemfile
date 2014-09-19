@@ -30,7 +30,7 @@ gem 'spring',        group: :development
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -40,3 +40,5 @@ gem 'spring',        group: :development
 gem 'mysql2'
 gem 'kaminari'
 gem 'bcrypt-ruby', require: "bcrypt"
+gem 'settingslogic'
+gem 'sanitize'

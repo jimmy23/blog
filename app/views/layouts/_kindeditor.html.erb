@@ -1,0 +1,5 @@
+<%= content_for :head do %>
+	<%= stylesheet_link_tag File.join(Settings.kindeditor,'themes/default/default.css') %>
+	<%= javascript_include_tag File.join(Settings.kindeditor,'kindeditor.js') %>
+	<%= javascript_include_tag File.join(Settings.kindeditor,'lang/zh_CN.js') %>
+<% end %>
