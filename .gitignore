@@ -14,3 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+/Gemfile.lock
+/config/unicorn.rb
+/config/config.yml
+/config/database.yml
