@@ -1,5 +1,5 @@
 <%= content_for :head do %>
-	<%= stylesheet_link_tag File.join(Settings.kindeditor,'themes/default/default.css') %>
-	<%= javascript_include_tag File.join(Settings.kindeditor,'kindeditor.js') %>
-	<%= javascript_include_tag File.join(Settings.kindeditor,'lang/zh_CN.js') %>
+	<%= stylesheet_link_tag File.join(Settings.kindeditor,'themes/default/default.css'), media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag File.join(Settings.kindeditor,'kindeditor.js'), 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag File.join(Settings.kindeditor,'lang/zh_CN.js'), 'data-turbolinks-track' => true %>
 <% end %>
