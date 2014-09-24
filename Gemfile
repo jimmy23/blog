@@ -39,6 +39,6 @@ gem 'unicorn'
 # gem 'debugger', group: [:development, :test]
 gem 'mysql2'
 gem 'kaminari'
-gem 'bcrypt-ruby', require: "bcrypt"
+gem 'bcrypt'
 gem 'settingslogic'
 gem 'sanitize'
