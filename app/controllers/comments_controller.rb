@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
 	private
 
 	def comment_params
-		params[:comment] = {}
+		params[:comment] ||= {}
 		if @current_user
 			params[:comment][:commenter] = @current_user.email.split("@")[0]
 		end
