@@ -11,9 +11,8 @@ class CommentsController < ApplicationController
 
 	def comment_params
 		params[:comment] ||= {}
-		if @current_user
-			params[:comment][:commenter] = @current_user.email.split("@")[0]
-		end
+		commenter = @current_user ? @current_user.email.split("@")[0] : (params[:comment][:commenter].empty? ? "游客" : params[:comment][:commenter].split("@")[0])
+		params[:comment][:commenter] = commenter
 
 		params[:comment][:body] = clean_html(params[:body])
 		params.require(:comment).permit(:commenter, :body)
