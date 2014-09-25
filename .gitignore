@@ -18,3 +18,4 @@
 /config/unicorn.rb
 /config/config.yml
 /config/database.yml
+/public/assets/
