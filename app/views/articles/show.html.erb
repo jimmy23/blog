@@ -28,7 +28,7 @@
 						<%= i + 1 %>楼 . <%= comment.created_at.strftime("%B %d,%Y %T") %> 
 					</div>
 					<div class="body">
-						<%= sanitize comment.body %>
+						<%== comment.body %>
 					</div>
 				</div>
 			</div>
@@ -69,9 +69,10 @@
 	KindEditor.ready(function(K) {
 		editor = K.create('textarea[name="body"]', {
 			resizeType : 1,
-			allowPreviewEmoticons : false,
+			allowPreviewEmoticons : true,
+			cssPath : ['http://kindeditor.net/ke4/plugins/code/prettify.css'],
 			items : [
-				'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+				'fontname', 'fontsize', 'code', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
 				'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
 				'insertunorderedlist', '|', 'emoticons', 'link']
 		});		

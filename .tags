@@ -1,0 +1,80 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddIsAdminToUsers	db/migrate/20140915083614_add_is_admin_to_users.rb	/^class AddIsAdminToUsers < ActiveRecord::Migration$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Blog
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+Article	app/models/article.rb	/^class Article < ActiveRecord::Base$/;"	c
+ArticleTest	test/models/article_test.rb	/^class ArticleTest < ActiveSupport::TestCase$/;"	c
+ArticlesController	app/controllers/articles_controller.rb	/^class ArticlesController < ApplicationController$/;"	c
+ArticlesControllerTest	test/controllers/articles_controller_test.rb	/^class ArticlesControllerTest < ActionController::TestCase$/;"	c
+ArticlesHelper	app/helpers/articles_helper.rb	/^module ArticlesHelper$/;"	m
+ArticlesHelperTest	test/helpers/articles_helper_test.rb	/^class ArticlesHelperTest < ActionView::TestCase$/;"	c
+Blog	config/application.rb	/^module Blog$/;"	m
+Comment	app/models/comment.rb	/^class Comment < ActiveRecord::Base$/;"	c
+CommentTest	test/models/comment_test.rb	/^class CommentTest < ActiveSupport::TestCase$/;"	c
+CommentsController	app/controllers/comments_controller.rb	/^class CommentsController < ApplicationController$/;"	c
+CommentsControllerTest	test/controllers/comments_controller_test.rb	/^class CommentsControllerTest < ActionController::TestCase$/;"	c
+CommentsHelper	app/helpers/comments_helper.rb	/^module CommentsHelper$/;"	m
+CommentsHelperTest	test/helpers/comments_helper_test.rb	/^class CommentsHelperTest < ActionView::TestCase$/;"	c
+CreateArticles	db/migrate/20140909080700_create_articles.rb	/^class CreateArticles < ActiveRecord::Migration$/;"	c
+CreateComments	db/migrate/20140915093038_create_comments.rb	/^class CreateComments < ActiveRecord::Migration$/;"	c
+CreateUsers	db/migrate/20140912080810_create_users.rb	/^class CreateUsers < ActiveRecord::Migration$/;"	c
+MeController	app/controllers/me_controller.rb	/^class MeController < ApplicationController$/;"	c
+MeControllerTest	test/controllers/me_controller_test.rb	/^class MeControllerTest < ActionController::TestCase$/;"	c
+MeHelper	app/helpers/me_helper.rb	/^module MeHelper$/;"	m
+MeHelperTest	test/helpers/me_helper_test.rb	/^class MeHelperTest < ActionView::TestCase$/;"	c
+RankController	app/controllers/rank_controller.rb	/^class RankController < ApplicationController$/;"	c
+RankControllerTest	test/controllers/rank_controller_test.rb	/^class RankControllerTest < ActionController::TestCase$/;"	c
+RankHelper	app/helpers/rank_helper.rb	/^module RankHelper$/;"	m
+RankHelperTest	test/helpers/rank_helper_test.rb	/^class RankHelperTest < ActionView::TestCase$/;"	c
+SessionsController	app/controllers/sessions_controller.rb	/^class SessionsController < ApplicationController$/;"	c
+SessionsControllerTest	test/controllers/sessions_controller_test.rb	/^class SessionsControllerTest < ActionController::TestCase$/;"	c
+SessionsHelper	app/helpers/sessions_helper.rb	/^module SessionsHelper$/;"	m
+SessionsHelperTest	test/helpers/sessions_helper_test.rb	/^class SessionsHelperTest < ActionView::TestCase$/;"	c
+Settings	config/initializers/settings.rb	/^class Settings < Settingslogic$/;"	c
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+UserTest	test/models/user_test.rb	/^class UserTest < ActiveSupport::TestCase$/;"	c
+UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+UsersControllerTest	test/controllers/users_controller_test.rb	/^class UsersControllerTest < ActionController::TestCase$/;"	c
+UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
+UsersHelperTest	test/helpers/users_helper_test.rb	/^class UsersHelperTest < ActionView::TestCase$/;"	c
+WelcomeController	app/controllers/welcome_controller.rb	/^class WelcomeController < ApplicationController$/;"	c
+WelcomeControllerTest	test/controllers/welcome_controller_test.rb	/^class WelcomeControllerTest < ActionController::TestCase$/;"	c
+WelcomeHelper	app/helpers/welcome_helper.rb	/^module WelcomeHelper$/;"	m
+WelcomeHelperTest	test/helpers/welcome_helper_test.rb	/^class WelcomeHelperTest < ActionView::TestCase$/;"	c
+article_params	app/controllers/articles_controller.rb	/^  def article_params$/;"	f	class:ArticlesController
+auth_log_in	app/controllers/application_controller.rb	/^  def auth_log_in$/;"	f	class:ApplicationController
+authenticate	app/models/user.rb	/^	def self.authenticate(email, password)$/;"	F	class:User
+change	db/migrate/20140909080700_create_articles.rb	/^  def change$/;"	f	class:CreateArticles
+change	db/migrate/20140912080810_create_users.rb	/^  def change$/;"	f	class:CreateUsers
+change	db/migrate/20140915083614_add_is_admin_to_users.rb	/^  def change$/;"	f	class:AddIsAdminToUsers
+change	db/migrate/20140915093038_create_comments.rb	/^  def change$/;"	f	class:CreateComments
+clean_html	app/helpers/application_helper.rb	/^	def clean_html(html)$/;"	f	class:ApplicationHelper
+comment_params	app/controllers/comments_controller.rb	/^	def comment_params$/;"	f	class:CommentsController
+create	app/controllers/articles_controller.rb	/^  def create$/;"	f	class:ArticlesController
+create	app/controllers/comments_controller.rb	/^	def create$/;"	f	class:CommentsController
+create	app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:SessionsController
+create	app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
+current_user	app/controllers/application_controller.rb	/^  def current_user$/;"	f	class:ApplicationController
+destroy	app/controllers/articles_controller.rb	/^  def destroy$/;"	f	class:ArticlesController
+destroy	app/controllers/sessions_controller.rb	/^  def destroy$/;"	f	class:SessionsController
+encrypt_password	app/models/user.rb	/^	def encrypt_password$/;"	f	class:User
+find_page	app/controllers/articles_controller.rb	/^  def find_page$/;"	f	class:ArticlesController
+get_cookies	app/controllers/application_controller.rb	/^  def get_cookies$/;"	f	class:ApplicationController
+index	app/controllers/articles_controller.rb	/^  def index$/;"	f	class:ArticlesController
+index	app/controllers/me_controller.rb	/^  def index$/;"	f	class:MeController
+index	app/controllers/welcome_controller.rb	/^  def index$/;"	f	class:WelcomeController
+is_admin?	app/controllers/application_controller.rb	/^  def is_admin?$/;"	f	class:ApplicationController
+new	app/controllers/articles_controller.rb	/^  def new$/;"	f	class:ArticlesController
+new	app/controllers/sessions_controller.rb	/^  def new$/;"	f	class:SessionsController
+new	app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
+new_top10	app/controllers/rank_controller.rb	/^  def new_top10$/;"	f	class:RankController
+show	app/controllers/articles_controller.rb	/^  def show$/;"	f	class:ArticlesController
+update	app/controllers/articles_controller.rb	/^  def update$/;"	f	class:ArticlesController
+user_params	app/controllers/users_controller.rb	/^  def user_params$/;"	f	class:UsersController
