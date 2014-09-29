@@ -42,3 +42,9 @@ gem 'kaminari'
 gem 'bcrypt'
 gem 'settingslogic'
 gem 'sanitize'
+
+group :development, :test do 
+	gem 'rspec-rails'
+	gem 'capybara'
+	gem 'factory_girl_rails'
+end
