@@ -1,9 +1,16 @@
 <%= render 'layouts/kindeditor' %>
 
+<%= render "layouts/message" %>
+
 <div class="col-md-8" sytle="margin-top:20px;">
 	<div class="article-info">
 		<h1 class="text-center"><%= @article.title %></h1>
-		<p class="article-time"><%= @article.created_at.strftime("%B %d,%Y %T") %></p>
+		<p class="article-time">
+			<%= @article.created_at.strftime("%B %d,%Y %T") %>
+			<% if is_admin? %>
+				<%= link_to "删", @article, data: {confirm: "确定要删除吗？"}, method: "delete" %>
+			<% end %>
+		</p>
 	</div>
 	
 	<div class="article-body"><%= sanitize @article.content %></div>
@@ -26,6 +33,9 @@
 				<div class="infos">
 					<div class="info">
 						<%= i + 1 %>楼 . <%= comment.created_at.strftime("%B %d,%Y %T") %> 
+						<% if is_admin? %>
+							<%= link_to "删", [comment.article, comment], method: :delete, data: {confirm: "你确定删除吗？"} %>
+						<% end %>
 					</div>
 					<div class="body">
 						<%== comment.body %>

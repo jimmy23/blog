@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   include ApplicationHelper
 
-  before_action :auth_log_in, only: [:new, :create, :destroy, :update]
+  before_action :auth_log_in, :not_is_admin_redirect_to_404, only: [:new, :create, :destroy, :update]
 
   def index
   	@articles = Article.page(params[:page])
@@ -60,5 +60,11 @@ class ArticlesController < ApplicationController
   def article_params
     params[:article][:content] = clean_html(params[:content])
   	params.require(:article).permit(:title, :content)
+  end
+
+  def not_is_admin_redirect_to_404
+    unless is_admin?
+      render '/public/404.html'
+    end
   end
 end
