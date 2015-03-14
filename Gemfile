@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -48,3 +48,5 @@ group :development, :test do
 	gem 'capybara'
 	gem 'factory_girl_rails'
 end
+
+gem 'puma'
